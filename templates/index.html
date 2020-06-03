@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+    <title>Сервер CB</title>
+  </head>
+</head>
+<body>
+	<div class="text">
+		<h1><i class="fas fa-info fa-sm"></i> Информация</h1>
+		<h2>Сервер приложения : Контактная книга</h2>
+    	<p>Данный сайт пока не предназначен для пользования!</p>
+    	<p>Для восстановления или смены пароля перейдите по <a href="{{ url_for('emailconfirm') }}">ссылке.</a></p>
+    	<p>Для дополнительной информации свяжитесь с <a href="https://vk.com/s.savamura">автором.</a></p>
+	</div>
+</body>
+</html>

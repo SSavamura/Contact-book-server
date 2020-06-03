@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_for_new_pass_form.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <title>Новый пароль</title>
+  </head>
+</head>
+<body>
+    <div class="password">
+        <h1>Новый пароль</h1>
+        <form action="" method="post">
+
+            <label for="new_password">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="new_password" placeholder="Новый пароль" id="new_password" required>
+
+            <label for="repeat_password">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="repeate_password" placeholder="Подтверждение пароля" id="repeat_password" required>
+            {% if msg %}
+            <div class="msg">{{ msg }}</div>
+            {% endif %}
+            <input type="submit" value="Готово">
+            
+        </form>
+    </div>
+</body>
+</html>

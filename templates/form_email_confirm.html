@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_for_form_email_confirm.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <title>Восстановление пароля</title>
+  </head>
+</head>
+<body>
+        <div class="email">
+            <h1>Восстановление пароля</h1>
+            <div class="text"> Введите указанный при регистрации e-mail, на который будет выслано письмо, для восстановления пароля.</div>
+            <form action="" method="post">
+                <label for="email">
+                    <i class="fas fa-envelope fa-lg"></i>
+                </label>
+                <input type="text" name="email" placeholder="Email" id="email" required>
+                {% if msg %}
+                <div class="msg">{{ msg }}</div>
+                {% endif %}
+                <input type="submit" value="Отправить">
+            </form>
+        </div>
+    </body>
+</html>
