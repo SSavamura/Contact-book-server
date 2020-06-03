@@ -241,7 +241,7 @@ def user(username):
             if request.args.get("option") == "add":
                 if name and number:
                     contact_row = user_database.getRow("name", name)
-                    if contact_row != (name, number):
+                    if contact_row[1] != number:
                         user_database.addSomeRow(('name', 'number'), (name, number))
                         return {"done": True}
                     else:
