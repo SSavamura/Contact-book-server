@@ -6,7 +6,6 @@ from flask_mysqldb import MySQL
 from database import TechDataBase
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime, timedelta, time
-#import time
 import random
 from json import dumps as jdumps
 
@@ -69,8 +68,8 @@ def before_first_request():
 @app.before_request  # Выполняется перед запросом
 def before_request():
     global users_database, users_key_database
-    users_key_database = TechDataBase(mysql, "user_key")  # INIT Базы с ключами узеров
     users_database = TechDataBase(mysql, "user")  # INIT Базы с юзерами
+    users_key_database = TechDataBase(mysql, "user_key")  # INIT Базы с ключами узеров
     checkTime(mysql)
 
 
