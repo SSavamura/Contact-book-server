@@ -19,9 +19,9 @@ class TechDataBase:
         if table == "user":
             self._cursor.execute("CREATE TABLE user (user_id MEDIUMINT(6) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, username VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL, email VARCHAR(255) NOT NULL, PRIMARY KEY( id ) USING BTREE)")
         elif table == "user_key":
-            self._cursor.execute(f"CREATE TABLE user_key (username VARCHAR(255) NOT NULL, user_key VARCHAR(255) NOT NULL, PRIMARY KEY( username ) USING BTREE, CONSTRAINT username FOREIGN KEY (username) REFERENCES user (username) ON UPDATE NO ACTION ON DELETE NO ACTION)")
+            self._cursor.execute(f"CREATE TABLE user_key (username VARCHAR(255) NOT NULL, user_key VARCHAR(255) NOT NULL, PRIMARY KEY( username ) USING BTREE, CONSTRAINT username FOREIGN KEY (username) REFERENCES {DATABASE}.user (username) ON UPDATE NO ACTION ON DELETE NO ACTION)")
         elif table == "password_recovery":
-            self._cursor.execute(f"CREATE TABLE password_recovery (user_id MEDIUMINT(6) UNSIGNED ZEROFILL NOT NULL, access_hash VARCHAR(100) NOT NULL, expires DATETIME NOT NULL, PRIMARY KEY (user_id) USING BTREE, CONSTRAINT user_id_key FOREIGN KEY (user_id) REFERENCES user (id) ON UPDATE NO ACTION ON DELETE NO ACTION)")
+            self._cursor.execute(f"CREATE TABLE password_recovery (user_id MEDIUMINT(6) UNSIGNED ZEROFILL NOT NULL, access_hash VARCHAR(100) NOT NULL, expires DATETIME NOT NULL, PRIMARY KEY (user_id) USING BTREE, CONSTRAINT user_id_key FOREIGN KEY (user_id) REFERENCES {DATABASE}.user (id) ON UPDATE NO ACTION ON DELETE NO ACTION)")
         else:
             self._cursor.execute(f"CREATE TABLE {table} (name VARCHAR(255) NOT NULL, number VARCHAR(255) NOT NULL)")
         self._mysql.connection.commit()
