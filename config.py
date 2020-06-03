@@ -1,10 +1,10 @@
 SECRET_KEY = "paiwofnwfOAWFNAOWFwoafnhoa8fnOAnfLWAfnalknwlkNFOAWf8OFAFLlo"
 
-HOST_ADRESS = "www.db4free.net"
+HOST_ADRESS = "us-cdbr-east-05.cleardb.net"
 HOST_PORT = 3306
-USERNAME = "savamura"
-PASSWORD = "72G41r08"
-DATABASE = "cb_database"
+USERNAME = "b143d3dc12319a"
+PASSWORD = "9ee48cbf"
+DATABASE = "heroku_9c27f1733e3f450"
 
 
 MAIL_SERVER = "smtp.googlemail.com"
