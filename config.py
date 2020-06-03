@@ -1,10 +1,10 @@
 SECRET_KEY = "paiwofnwfOAWFNAOWFwoafnhoa8fnOAnfLWAfnalknwlkNFOAWf8OFAFLlo"
 
-HOST_ADRESS = "localhost"
+HOST_ADRESS = "www.db4free.net"
 HOST_PORT = 3306
-USERNAME = "Savamura"
+USERNAME = "savamura"
 PASSWORD = "72G41r08"
-DATABASE = "CB"
+DATABASE = "cb_database"
 
 
 MAIL_SERVER = "smtp.googlemail.com"
