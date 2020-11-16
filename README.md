@@ -1,3 +1,3 @@
 # Contact book server
 
-Implemented a server (python) for working with a desktop application (C#)
+Implemented a Python server for working with a C# desktop application
